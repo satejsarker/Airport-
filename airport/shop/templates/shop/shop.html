@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shop information </title>
+</head>
+<style>
+    background {
+        color: "#E6E6FA";
+    }
+    
+    table,
+    th,
+    td {
+        border: 5px solid black;
+        border-collapse: collapse;
+    }
+    
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+    
+    footer {
+        padding: 1em;
+        color: white;
+        background-color: black;
+        clear: left;
+        text-align: center;
+    }
+    
+    background {
+        color: #ebebe0;
+    }
+    
+    table tr:nth-child(odd) {
+        width: 100%;
+        background-color: #f1f1c1;
+    }
+    
+    th {
+        color: blue;
+    }
+    
+    td {
+        color: #862d2d;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: %;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        padding: 16px;
+        text-decoration: none;
+    }
+    
+    .main {
+        padding: 16px;
+        margin-top: 30px;
+        height: 150px;
+    }
+    
+    nav ul a {
+        text-decoration: none;
+    }
+    
+    h1 {
+        color: crimson
+    }
+    
+    article {
+        margin-left: 170px;
+        border-left: 1px solid gray;
+        padding: 1em;
+        overflow: hidden;
+    }
+</style>
+
+<body>
+    <ul>
+        <li><a href="/">back</a></li>
+    </ul>
+    <article>
+        {% block content %} {% load staticfiles %}
+        <h1> <br>Shop information details</h1>
+        <img src="{% static 'personal/img/shop1.jpg' %}" alt="shop">
+
+        <table style="width:60%">
+            <tr>
+
+                <th>Shop name</th>
+
+                <th>Location</th>
+                <th>Contact</th>
+            </tr>
+            {% for shop in object_list %}
+            <tr>
+                <td><a href="/shop/{{shop.id}}">{{shop.title}} </a></td>
+                <td>
+                    <h4>{{shop.location }}</h4>
+                </td>
+                <td>{{shop.contact }}</td>
+            </tr>
+
+            {% endfor%}
+        </table>
+
+    </article>
+
+    <footer><a href="/">@AIRPORT portal</a></footer>
+
+    {% endblock %}
+</body>
+
+</html>

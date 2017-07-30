@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FLIGHT DETAILS </title>
+</head>
+<style>
+    table,
+    th,
+    td {
+        border: 5px solid black;
+        border-collapse: collapse;
+    }
+    
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+    
+    background {
+        color: #ebebe0;
+    }
+    
+    table tr:nth-child(even) {
+        width: 70%;
+        background-color: #f1f1c1;
+    }
+    
+    th {
+        color: blue;
+    }
+    
+    td {
+        color: #862d2d;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: %;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        padding: 16px;
+        text-decoration: none;
+    }
+    
+    h1 {
+        color: crimson
+    }
+    
+    footer {
+        padding: 1em;
+        color: white;
+        background-color: black;
+        clear: left;
+        text-align: center;
+    }
+    
+    nav ul a {
+        text-decoration: none;
+    }
+    
+    article {
+        margin-left: 170px;
+        border-left: 1px solid gray;
+        padding: 1em;
+        overflow: hidden;
+    }
+</style>
+
+<body>
+    <article>
+        {% block content %}
+
+        <h1><br>Find out the flight details </h1>
+        <p>
+            {% load static %}
+
+            <img src="{% static 'personal/img/f2.jpg' %}" alt="dp">
+            <table style="width:70%">
+
+                <tr>
+
+                    <th>Airline</th>
+
+                    <th>Flight Number</th>
+
+                    <th>Source</th>
+                    <th>STA</th>
+                    <th>ETA</th>
+                    <th>Status</th>
+                </tr>
+                {% for flight in object_list %}
+                <tr>
+                    <td>{{flight.airline}}</td>
+                    <td>{{flight.flight_no}}</td>
+                    <td>{{flight.source}}</td>
+                    <td>{{flight.sta}}</td>
+                    <td>{{flight.eta}}</td>
+                    <td>{{flight.status}}</td>
+                    {% endfor %}
+                </tr>
+            </table>
+
+        </p>
+    </article>
+
+
+    {% endblock %}
+    <ul>
+        <li><a href="/">Back</a></li>
+    </ul>
+    <footer><a href="/">@AIRPORT portal</a>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Music</title>
+</head>
+
+<body>
+    <div align="center">
+        {% if all_album%}
+        <h2>here are the album</h2>
+        <ui>
+            {% for album in all_album %}
+            <li><a href="{% url 'music:details' album.id %}">{{album.album_title}}<br><img src="{{album.album_logo}}" alt="Click for details" height="100" width="77"></a></li>
+            {% endfor %}
+        </ui>
+
+        {% else %}
+        <h1> there is no album</h1>
+        {% endif %}
+    </div>
+</body>
+
+</html>

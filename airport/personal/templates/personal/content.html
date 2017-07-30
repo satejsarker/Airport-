@@ -1,0 +1,118 @@
+{% extends "personal/home.html" %} {% block content %}
+<html>
+<title>contact</title>
+
+<head></head>
+
+<style>
+    h1 {
+        color: blue;
+    }
+    
+    p {
+        color: #E9967A;
+    }
+    
+    address {
+        color: #4B0082;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        padding: 16px;
+        text-decoration: none;
+    }
+    
+    footer {
+        padding: 1em;
+        color: white;
+        background-color: black;
+        clear: left;
+        text-align: center;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: .2px;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: %;
+    }
+    
+    nav ul a {
+        text-decoration: none;
+    }
+    
+    article {
+        margin-left: 170px;
+        border-left: 2px solid gray;
+        padding: 1em;
+        overflow: hidden;
+    }
+    
+    background {
+        color: #ebebe0;
+    }
+</style>
+
+
+<body>
+    <h1><br>Contact Us</h1>
+    {% load staticfiles %}
+    <p>
+        If you have any queries or suggestions, or wish to tell us about your experience at 'XXX'' International Airport , <br>please get in touch with us:</p>
+
+    <img src="{% static 'personal/img/contact1.jpg' %}" alt="airport">
+
+    <article>
+        <br><img src="{% static 'personal/img/icon/contact.jpg' %}" alt="airport">
+
+
+
+
+        <address>
+Toll Free: 1800 425 4425 (24x7) <br>
+WhatsApp: +91 888 499 8888 ( 24x7)<br>
+Feedback Desk Email :<a href="#" >feedback@bialairport.com (24x7)</a><br>
+        </address>
+        <img src="{% static 'personal/img/icon/contact2.jpg' %}" alt="airport"></p>
+        <address>
+    Tel : 080-6678 2425 <br>
+Fax : 080-6678 3366<br>
+XXX Airport Limited,<br>
+Administration Block,<br>   
+Devanahalli - 560 300, India.<br>
+<h3>Careers and Recruitment</h3><br>
+All aspiring applicants are to contact via the careers link @ Careers<br>
+<h3>Grievance Desk</h3><br>
+Terminal Manager <br>
+Email:<a href="#"> terminalmanager@bialairport.com</a><br>
+Tel : 953 888 5555<br>
+<h3>Media Contacts : (Business Hours : 8:30AM to 5:30PM , Mon-Fri)</h3><br>
+Tel : 080-6678 2045/ 080-6678 2041<br>
+<h3>Appellate Authority (Business Hours : 08:30AM to 5:30PM, Mon-Fri)</h3><br>
+Sanjiv Chawla,<br>
+DGM - Customer Engagement and Service Quality<br>
+Email: <a href="#">sanjiv.c@bialairport.com</a><br>
+Tel : +91-9538882254 <br>
+</address>
+
+    </article>
+    <ul>
+        <li><a href="/">Back</a></li>
+    </ul>
+    <footer><a href="/">@AIRPORT portal</a></footer>
+</body>
+
+
+{% endblock %}
+
+</html>

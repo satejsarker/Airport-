@@ -1,0 +1,144 @@
+<html>
+<title>airport taxi
+</title>
+<style>
+    background {
+        color: "#E6E6FA";
+    }
+    
+    table,
+    th,
+    td {
+        border: 5px solid black;
+        border-collapse: collapse;
+    }
+    
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+    
+    footer {
+        padding: 1em;
+        color: white;
+        background-color: black;
+        clear: left;
+        text-align: center;
+    }
+    
+    background {
+        color: #ebebe0;
+    }
+    
+    table tr:nth-child(odd) {
+        width: 100%;
+        background-color: #f1f1c1;
+    }
+    
+    th {
+        color: blue;
+    }
+    
+    td {
+        color: #862d2d;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: %;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        padding: 16px;
+        text-decoration: none;
+    }
+    
+    .main {
+        padding: 16px;
+        margin-top: 30px;
+        height: 150px;
+    }
+    
+    nav ul a {
+        text-decoration: none;
+    }
+    
+    article {
+        margin-left: 170px;
+        border-left: 1px solid gray;
+        padding: 1em;
+        overflow: hidden;
+    }
+</style>
+
+<body>
+    <article>
+        <table style="width:50%">
+
+            <tr>
+                <th>
+                    <h4>Condition</h4>
+                </th>
+                <th>
+                    <h4>Minimum</h4>
+                </th>
+
+                <th>
+                    <h4>Per km</h4>
+
+                </th>
+
+
+                <tr>
+                    <td> Hire Charges A/C Taxi
+                    </td>
+                    <td>Rs,80/- (4km)</td>
+                    <td>Rs.19.50</td>
+
+                </tr>
+                <tr>
+                    <td>Waiting Charges</td>
+                    <td>Free for first 20 minutes and thereafter Rs.10/- per 15 minutes or part thereof.</td>
+                </tr>
+                <tr>
+                    <td>Luggage Charges</td>
+                    <td>No charges for first 120 kgs. (Suitcase, Bedding etc.) And Rs. 5/- for every additional 20 kgs. Or part thereof</td>
+                </tr>
+                <tr>
+                    <td>Night Charges</td>
+                    <td>
+                        From midnight 12 O' clock to morning 6 A.M. 10% extra on the above fare</td>
+                </tr>
+                <p>
+                    <p><br>
+                        <h1> Airport taxi</h1>
+
+                        {% load staticfiles %}
+                        <img src="{% static 'personal/img/a3.jpg' %}" alt="shop"><br>Hiring taxi from Kempegowda International Airport Bengaluru: Conveniently placed ‘Airport taxi’ pictogram signages are seen right through the baggage claim areas of both
+                        international and domestic terminals.<br> Follow these signs to go to the inner curb
+                        <br>which is the first lane outside ‘Arrivals’; board directly at the ‘Taxi boarding point’. For security reasons, share your name and destination details with the staff before boarding. Hiring taxi from Bangalore City: Our taxi
+                        service partners can be easily contacted on their respective call centre numbers. Their passenger database collection enables a quicker response time for subsequent hire. Our partners have reliable drivers, who ensure not just
+                        a safe journey, but are responsible for their baggage as well.
+                    </p>
+
+
+    </article>
+    <ul>
+        <li><a href="/">back</a></li>
+    </ul>
+</body>
+
+</html>
